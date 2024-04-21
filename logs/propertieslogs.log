@@ -1,0 +1,33 @@
+[INFO ] 2024-04-21 19:36:51.928 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:36:51.932 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:39:55.797 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:39:55.807 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:45:48.192 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:45:48.197 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:45:49.699 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 19:45:49.700 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 19:45:50.323 [main] CustomerTests - Appium driver quit successfully.
+[INFO ] 2024-04-21 19:46:31.205 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:46:31.210 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:46:32.555 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 19:46:32.555 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 19:46:33.202 [main] CustomerTests - Appium driver quit successfully.
+[INFO ] 2024-04-21 19:48:09.989 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:48:10.000 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 19:48:11.740 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 19:48:11.740 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 19:48:12.260 [main] CustomerTests - Appium driver quit successfully.
+[INFO ] 2024-04-21 20:04:51.284 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 20:04:51.291 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 20:04:52.849 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 20:04:52.850 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 20:08:51.115 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 20:08:51.121 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 20:08:52.300 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 20:08:52.301 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 22:32:26.308 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-21 22:32:26.320 [main] CustomerTests - Appium driver initialized successfully.
+[INFO ] 2024-04-21 22:32:27.899 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Customer']
+[INFO ] 2024-04-21 22:32:27.899 [main] CustomerTests - Clicked on Sign Up button.
+[INFO ] 2024-04-21 22:32:40.070 [main] BasePage - Entered text: onkar41@gmail.com into element with locator: By.xpath: //android.widget.ScrollView/android.view.View/android.widget.EditText[1]
+[INFO ] 2024-04-21 22:32:40.070 [main] CustomerTests - Entering Customer Email Id or PhoneNo.
