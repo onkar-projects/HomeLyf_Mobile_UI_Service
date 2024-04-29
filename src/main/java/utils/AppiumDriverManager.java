@@ -22,6 +22,7 @@ public class AppiumDriverManager {
             caps.setCapability("app", AppConfig.APP_PATH);
             caps.setCapability("deviceName", AppConfig.DEVICE_NAME);
             caps.setCapability("automationName", AppConfig.AUTO_NAME);
+            caps.setCapability("unicodeKeyboard", true);
 
             // Initialize Appium driver
             AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);

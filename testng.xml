@@ -3,14 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="tests.CustomerTests">
+	   <class name="tests.VendorTests">
 		  <methods>
-			  <include name="customerLoginTest"></include>
+			  <include name="vendor_SignUp_Test"/>
+			  <include name="vendor_SignIn_Test"/>
+			  <include name="vendor_SignIn_Test_ErrorMessage"/>
 		  </methods>
 	  </class>
-   <!--   <class name="pages.BasePage"/>
-      <class name="HomeLyf.mobileDemoProject.Base"/>
-      <class name="tests.LoginTest"/> -->
-    </classes>
+	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
