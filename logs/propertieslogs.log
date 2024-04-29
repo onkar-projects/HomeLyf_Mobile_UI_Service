@@ -4,3 +4,27 @@
 [INFO ] 2024-04-29 11:22:12.802 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Sign In']
 [INFO ] 2024-04-29 11:22:14.154 [main] BasePage - Retrived Please Enter Email or Mobile Number element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Email or Mobile Number"]
 [INFO ] 2024-04-29 11:22:14.449 [main] BasePage - Retrived Please Enter Password element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Password"]
+[INFO ] 2024-04-29 13:09:58.219 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 13:10:19.629 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 13:10:21.920 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 13:10:40.525 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 13:10:42.226 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Partner']
+[INFO ] 2024-04-29 13:10:48.111 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Sign In']
+[INFO ] 2024-04-29 13:10:49.501 [main] BasePage - Retrived Please Enter Email or Mobile Number element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Email or Mobile Number"]
+[INFO ] 2024-04-29 13:10:49.771 [main] BasePage - Retrived Please Enter Password element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Password"]
+[INFO ] 2024-04-29 23:18:49.065 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:21:09.055 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:21:34.940 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 23:21:37.405 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:21:52.581 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 23:21:53.971 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Continue as a Partner']
+[INFO ] 2024-04-29 23:21:57.974 [main] BasePage - Clicked element with locator: By.xpath: //android.widget.Button[@content-desc='Sign In']
+[INFO ] 2024-04-29 23:21:58.996 [main] BasePage - Retrived Please Enter Email or Mobile Number element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Email or Mobile Number"]
+[INFO ] 2024-04-29 23:21:59.135 [main] BasePage - Retrived Please Enter Password element with locator: By.xpath: //android.view.View[@content-desc="Please Enter Password"]
+[INFO ] 2024-04-29 23:22:52.959 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:23:07.923 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 23:23:10.210 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:23:23.586 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 23:25:08.237 [main] AppiumServerManager - Appium server started successfully.
+[INFO ] 2024-04-29 23:25:23.361 [main] AppiumDriverManager - Appium driver initialized successfully.
+[INFO ] 2024-04-29 23:25:24.423 [main] AppiumServerManager - Appium server stopped successfully.

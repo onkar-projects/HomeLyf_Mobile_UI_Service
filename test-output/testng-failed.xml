@@ -6,6 +6,8 @@
       <class name="tests.VendorTests">
         <methods>
           <include name="vendor_SignIn_Test_ErrorMessage"/>
+          <include name="setUP"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- tests.VendorTests -->
     </classes>

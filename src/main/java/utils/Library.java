@@ -1,5 +1,7 @@
 package utils;
 
+import org.openqa.selenium.WebElement;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
@@ -112,4 +114,20 @@ public class Library {
 		}
 		return actual;
 	}
+	
+	
+	 public static String getErrorMessageFromUI(AndroidDriver driver, VendorPage pageObject, String methodName) {
+	        String errorMessage = "";
+	        try {
+	            // Call the appropriate method from the page object to retrieve the error message element
+	            WebElement errorMessageElement = (WebElement) VendorPage.class.getMethod(methodName).invoke(pageObject);
+
+	            // Retrieve the error message text from the element
+	            errorMessage = errorMessageElement.getAttribute("content-desc");
+	            
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        return errorMessage;
+	    }
 }
