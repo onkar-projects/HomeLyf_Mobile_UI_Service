@@ -5,9 +5,13 @@
     <classes>
 	   <class name="tests.VendorTests">
 		  <methods>
-			  <include name="vendor_SignUp_Test"/>
+			 <include name="vendor_SignUp_Test"/>
 			  <include name="vendor_SignIn_Test"/>
-			  <include name="vendor_SignIn_Test_ErrorMessage"/>
+			  <include name="vendor_SignUp_Invalid_Test"/>
+			  <include name="vendor_SignIn_Invalid_Test"/>
+			  <include name="vendor_SignIn_Blank_Test"/>
+			  <include name="vendor_SignUp_blank_Test"/>
+			  <include name="vendor_SignUp_InvalidError_Testvendor_SignUp_InvalidError_Test"/>
 		  </methods>
 	  </class>
 	  </classes>

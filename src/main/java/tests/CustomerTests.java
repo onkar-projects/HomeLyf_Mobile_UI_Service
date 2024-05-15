@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 import utils.AppiumDriverManager;
@@ -23,7 +24,8 @@ public class CustomerTests {
 			e.printStackTrace();
 		}
 	}
-		
+	
+	
 	@Test(priority=1, enabled = false, description = "Customer SignUp with valid data" , dataProvider = "CustomerSignupvaliddata", dataProviderClass = utils.DataProviderClass.class)
 	public void TC_001_Customer_Sign_up(String name, String emailid, String number, String password, String confirmpassword) throws InterruptedException, MalformedURLException {
 		Library.customer_SignUp_Details(driver,name, emailid, number, password, confirmpassword);
