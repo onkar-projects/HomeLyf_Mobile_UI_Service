@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderClass {
-	static String path = System.getProperty("user.dir") + "\\src\\resorces\\java\\TestData\\VendorTestData.xlsx";
+	static String path = System.getProperty("user.dir") + "\\src\\main\\resources\\TestData\\testdata.xlsx";
 	static ExcelDataProvider sheet = new ExcelDataProvider(path);
 
 //	@DataProvider(name = "CustomerSignupvaliddata")
@@ -159,33 +159,61 @@ public class DataProviderClass {
 	
 	@DataProvider(name = "VendorSignUpTestData")
 	public String[][] getVendorSignUpData() throws IOException {
-		int rownum = sheet.getRowCount("VendorTestData");
+		int rownum = sheet.getRowCount("ValidVendorTestData");
 		String vendorSignUpData[][] = new String[rownum][12];
 		
 		for(int i=1; i<=rownum; i++) {
 			for(int j=0; j<12; j++) {
-				vendorSignUpData[i-1][j] = sheet.getCellData("VendorTestData", i, j);
+				vendorSignUpData[i-1][j] = sheet.getCellData("ValidVendorTestData", i, j);
 				
 				System.out.println("VendorDetails: "+vendorSignUpData[i-1][j]);
 			}
 		}
 		return vendorSignUpData;
 	}
+	@DataProvider(name = "VendorSignUpInvalidTestData")
+	public String[][] getVendorSignUpInvalidData() throws IOException {
+		int rownum = sheet.getRowCount("InvalidVendorTestData");
+		String vendorSignUpInvalidData[][] = new String[rownum][12];
+		for(int i=1; i<=rownum;i++) {
+			for(int j=0; j<12; j++) {
+				vendorSignUpInvalidData[i-1][j] = sheet.getCellData("InvalidVendorTestData", i, j);
+				System.out.println("VendorSignUpInvalidDetails: "+vendorSignUpInvalidData[i-1][j]);
+			}
+		}
+		return vendorSignUpInvalidData;
+	}
 	
 	@DataProvider(name = "VendorSignInTestData")
 	public String[][] getVendorSignInData() throws IOException {
-		int rownum = sheet.getRowCount("VendorTestData");
+		int rownum = sheet.getRowCount("ValidVendorTestData");
 		String vendorSignInData[][] = new String[rownum][2];
 		
 		for(int i=1; i<=rownum; i++) {
-		 vendorSignInData[i-1][0] = sheet.getCellData("VendorTestData", i, 1);
-		 vendorSignInData[i-1][1] = sheet.getCellData("VendorTestData", i, 10);
+		 vendorSignInData[i-1][0] = sheet.getCellData("ValidVendorTestData", i, 1);
+		 vendorSignInData[i-1][1] = sheet.getCellData("ValidVendorTestData", i, 10);
 		 
 		 System.out.println("VendorUserName: "+vendorSignInData[i-1][0]);
 		 System.out.println("VendorPassword: "+vendorSignInData[i-1][1]);
 			
 		 }
 		return vendorSignInData;
+	}
+	
+	@DataProvider(name = "VendorSignInInvalidTestData")
+	public String[][] getVendorSignInInvalidData() throws IOException {
+		int rownum = sheet.getRowCount("InvalidVendorTestData");
+		String vendorSignInInvalidData[][] = new String[rownum][2];
+		
+		for(int i=1; i<=rownum; i++) {
+		 vendorSignInInvalidData[i-1][0] = sheet.getCellData("InvalidVendorTestData", i, 1);
+		 vendorSignInInvalidData[i-1][1] = sheet.getCellData("InvalidVendorTestData", i, 10);
+		 
+		 System.out.println("VendorInvalidUserName: "+vendorSignInInvalidData[i-1][0]);
+		 System.out.println("VendorInvalidPassword: "+vendorSignInInvalidData[i-1][1]);
+			
+		 }
+		return vendorSignInInvalidData;
 	}
 	
 	//--------------------------------CustomerTestData----------------------------------//
