@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.VendorTests">
+      <class name="tests.Services">
         <methods>
-          <include name="vendor_SignIn_Test_ErrorMessage"/>
+          <include name="selectLightFitting_CeilingLampsUninstallation"/>
+          <include name="selectLightFitting_ConsultationChargesAndQuotation"/>
           <include name="setUP"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.VendorTests -->
+      </class> <!-- tests.Services -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

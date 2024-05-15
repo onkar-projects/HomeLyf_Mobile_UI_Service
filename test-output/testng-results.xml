@@ -1,25 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-29T23:24:57 IST" name="Default suite" finished-at="2024-04-29T23:25:24 IST" duration-ms="26610">
+  <suite started-at="2024-05-06T01:42:07 IST" name="Default suite" finished-at="2024-05-06T01:44:17 IST" duration-ms="129881">
     <groups>
     </groups>
-    <test started-at="2024-04-29T23:24:57 IST" name="Default test" finished-at="2024-04-29T23:25:24 IST" duration-ms="26610">
-      <class name="tests.VendorTests">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:tests.VendorTests@7e985ce9]" started-at="2024-04-29T23:24:57 IST" name="setUP" finished-at="2024-04-29T23:25:23 IST" duration-ms="25484" status="PASS">
+    <test started-at="2024-05-06T01:42:07 IST" name="Default test" finished-at="2024-05-06T01:44:17 IST" duration-ms="129881">
+      <class name="tests.Services">
+        <test-method is-config="true" signature="setUP(java.lang.String,java.lang.String)[pri:0, instance:tests.Services@248e319b]" started-at="2024-05-06T01:42:07 IST" name="setUP" finished-at="2024-05-06T01:42:34 IST" duration-ms="26718" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="vendor_SignIn_Test_ErrorMessage()[pri:3, instance:tests.VendorTests@7e985ce9]" started-at="2024-04-29T23:25:23 IST" name="vendor_SignIn_Test_ErrorMessage" description="Vendor should not accept blank email field" finished-at="2024-04-29T23:25:23 IST" duration-ms="28" status="PASS">
+        <test-method signature="selectLightFitting_FanInstallation()[pri:2, instance:tests.Services@248e319b]" started-at="2024-05-06T01:42:34 IST" name="selectLightFitting_FanInstallation" finished-at="2024-05-06T01:42:41 IST" duration-ms="7690" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vendor_SignIn_Test_ErrorMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.VendorTests@7e985ce9]" started-at="2024-04-29T23:25:23 IST" name="tearDown" finished-at="2024-04-29T23:25:24 IST" duration-ms="977" status="PASS">
+        </test-method> <!-- selectLightFitting_FanInstallation -->
+        <test-method signature="selectLightFitting_FanRepair()[pri:3, instance:tests.Services@248e319b]" started-at="2024-05-06T01:42:41 IST" name="selectLightFitting_FanRepair" finished-at="2024-05-06T01:42:56 IST" duration-ms="14093" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.VendorTests -->
+        </test-method> <!-- selectLightFitting_FanRepair -->
+        <test-method signature="selectLightFitting_FanUninstallation()[pri:4, instance:tests.Services@248e319b]" started-at="2024-05-06T01:42:56 IST" name="selectLightFitting_FanUninstallation" finished-at="2024-05-06T01:43:05 IST" duration-ms="9685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectLightFitting_FanUninstallation -->
+        <test-method signature="selectLightFitting_CeilingLampsInstallation()[pri:5, instance:tests.Services@248e319b]" started-at="2024-05-06T01:43:05 IST" name="selectLightFitting_CeilingLampsInstallation" finished-at="2024-05-06T01:43:15 IST" duration-ms="9575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectLightFitting_CeilingLampsInstallation -->
+        <test-method signature="selectLightFitting_CeilingLampsUninstallation()[pri:6, instance:tests.Services@248e319b]" started-at="2024-05-06T01:43:15 IST" name="selectLightFitting_CeilingLampsUninstallation" finished-at="2024-05-06T01:43:24 IST" duration-ms="8771" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[Could not parse selector expression `new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().description(Consultation charges and then quotation))`: `UiScrollable` doesn't have suitable method `scrollIntoView` with arguments [new UiSelector().description(Consultation charges and then quotation)]: Could not parse selector expression `new UiSelector().description(Consultation charges and then quotation)`: `UiSelector` doesn't have suitable method `description` with arguments [Consultation charges and then quotation]: Could not parse selector expression `new UiSelector().description(Consultation charges and then quotation)`: Consultation charges and then quotation is not a string
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [aec18628-efe7-481d-89e6-5b97db4f9f50, findElement {value=new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().description(Consultation charges and then quotation)), using=-android uiautomator}]
+Capabilities {appium:app: C:\Users\DELL-PC\Documents\..., appium:appPackage: com.qdtas.homelyf_services, appium:automationName: uiautomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\DELL-PC\Documents\..., automationName: uiautomator2, deviceName: Promax, platformName: ANDROID, unicodeKeyboard: true}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 9, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: aec18628-efe7-481d-89e6-5b97db4f9f50]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: Could not parse selector expression `new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().description(Consultation charges and then quotation))`: `UiScrollable` doesn't have suitable method `scrollIntoView` with arguments [new UiSelector().description(Consultation charges and then quotation)]: Could not parse selector expression `new UiSelector().description(Consultation charges and then quotation)`: `UiSelector` doesn't have suitable method `description` with arguments [Consultation charges and then quotation]: Could not parse selector expression `new UiSelector().description(Consultation charges and then quotation)`: Consultation charges and then quotation is not a string
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [aec18628-efe7-481d-89e6-5b97db4f9f50, findElement {value=new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().description(Consultation charges and then quotation)), using=-android uiautomator}]
+Capabilities {appium:app: C:\Users\DELL-PC\Documents\..., appium:appPackage: com.qdtas.homelyf_services, appium:automationName: uiautomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\DELL-PC\Documents\..., automationName: uiautomator2, deviceName: Promax, platformName: ANDROID, unicodeKeyboard: true}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 9, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: aec18628-efe7-481d-89e6-5b97db4f9f50
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at pages.BasePage.scrollDown(BasePage.java:136)
+at electricals.LightFitting.scrollDown(LightFitting.java:64)
+at tests.Services.selectLightFitting_CeilingLampsUninstallation(Services.java:119)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectLightFitting_CeilingLampsUninstallation -->
+        <test-method signature="selectLightFitting_ConsultationChargesAndQuotation()[pri:7, instance:tests.Services@248e319b]" started-at="2024-05-06T01:43:24 IST" name="selectLightFitting_ConsultationChargesAndQuotation" finished-at="2024-05-06T01:44:17 IST" duration-ms="53237" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc='Consultation charges and then quotation'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\DELL-PC\Documents\..., appium:appPackage: com.qdtas.homelyf_services, appium:automationName: uiautomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\DELL-PC\Documents\..., automationName: uiautomator2, deviceName: Promax, platformName: ANDROID, unicodeKeyboard: true}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 9, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: aec18628-efe7-481d-89e6-5b97db4f9f50]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.view.View[@content-desc='Consultation charges and then quotation'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.20.0', revision: '866c76ca80'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\DELL-PC\Documents\..., appium:appPackage: com.qdtas.homelyf_services, appium:automationName: uiautomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\DELL-PC\Documents\..., automationName: uiautomator2, deviceName: Promax, platformName: ANDROID, unicodeKeyboard: true}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 9, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:unicodeKeyboard: true, appium:viewportRect: {height: 1857, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: aec18628-efe7-481d-89e6-5b97db4f9f50
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.BasePage.waitForElement(BasePage.java:49)
+at pages.BasePage.getTextByAttribute(BasePage.java:108)
+at electricals.LightFitting.getTextConsultaionChargesAndThenQuotation(LightFitting.java:84)
+at tests.Services.selectLightFitting_ConsultationChargesAndQuotation(Services.java:132)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectLightFitting_ConsultationChargesAndQuotation -->
+      </class> <!-- tests.Services -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
