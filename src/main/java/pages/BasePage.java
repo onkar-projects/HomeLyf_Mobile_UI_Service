@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -16,6 +17,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidTouchAction;
@@ -48,6 +50,7 @@ public class BasePage {
 	protected WebElement waitForElement(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
+	
 
 	protected void clickElement(By locator) {
 		waitForElement(locator).click();
@@ -104,7 +107,7 @@ public class BasePage {
 	}
 
 	//method overloading concept
-	public String getTextByAttribute(By locator) throws InterruptedException {
+	public String getTextByAttribute(By locator)   {
 		WebElement element = waitForElement(locator);
 		String errorText=element.getAttribute("content-desc");
 		System.out.println("Actual Text: "+ errorText);
@@ -135,4 +138,32 @@ public class BasePage {
 		String signUpButton = "new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().description("+text+"))";
 		 driver.findElement(AppiumBy.androidUIAutomator(signUpButton));
 	}
+	
+	public void swipeScreen(By locator){
+//		Dimension dim = driver.manage().window().getSize();
+//		int height = dim.getHeight();
+//		int width = dim.getWidth();
+//
+//		int startx=width/2;
+//		int endx=width/2;
+//		int starty=(int)(height*.40);
+//		int endy=(int)(height*.10);
+//
+//		TouchAction action = new (driver);
+//		action.press(PointOption.point(startx, starty))
+//		.moveTo(PointOption.point(endx, endy))
+//		.release()44
+//		.perform();
+		
+		WebElement scrollableElement = waitForElement(locator);
+		 Actions actions = new Actions(driver);
+
+	        // Perform a touch-based scroll action on the scrollable element
+	        actions.moveToElement(scrollableElement).clickAndHold().moveByOffset(0, 100).release().perform();
+	}
+	
+	
+
+	
+	
 }

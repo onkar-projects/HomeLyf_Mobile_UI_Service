@@ -27,6 +27,7 @@ public class AppiumDriverManager {
             // Initialize Appium driver
             AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
             logger.info("Appium driver initialized successfully.");
+            ExtentReportNG.setDriver(driver);
             return driver;
         } catch (MalformedURLException e) {
             logger.error("Failed to initialize Appium driver: " + e.getMessage());

@@ -20,9 +20,34 @@ public class FloorOrTerrace extends BasePage{
 	}
 	
 	public void clickOnConsultationChargesAndThenQuotation() {
-		clickElement(AppiumBy.xpath("//android.view.View[@content-desc=\"Consultation charges and then quotation\r\n"
-				+ "	Description Not Available\r\n"
-				+ "	₹ 150\r\n"
-				+ "	Duration: 30 Min\"]"));
+		clickElement(AppiumBy.xpath("(//android.view.View[2]/android.view.View)[3]"));
 	}
+	public void clickOnAddBtn() {
+		clickElement(AppiumBy.xpath("//android.widget.Button[@content-desc=\"Add\"]"));
+	}
+
+	public void clickOnAddToCartTab() {
+		clickElement(AppiumBy.xpath("(//android.view.View[3])[2]"));
+	}
+
+	public void clickOnProceedButton() {
+		clickElement(AppiumBy.xpath("//android.widget.Button[@content-desc=\"Proceed\"]"));
+	}
+	public void clickOnContinueBookingBtn() {
+		clickElement(AppiumBy.xpath("//android.widget.Button[@content-desc=\"Continue Booking\"]"));
+	}
+	
+	public String getOrderPlacedSuccessfulMsg() {
+		return getTextByAttribute(AppiumBy.xpath("//android.view.View[@content-desc=\"Order placed successfully\"]"));
+	}
+
+	public void clickOnSelectDate() {
+		clickElement(AppiumBy.xpath("(//android.view.View[4]/android.view.View[1]/android.view.View)[1]"));
+	}
+
+	public void clickOnSelectTime() {
+		clickElement(AppiumBy.xpath("(//android.view.View[6]/android.view.View[1]/android.view.View)[1]"));
+	}
+
+	
 }

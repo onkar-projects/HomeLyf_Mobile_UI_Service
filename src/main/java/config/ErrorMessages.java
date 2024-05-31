@@ -14,18 +14,18 @@ public class ErrorMessages {
 	//------------------------------Vendor_SignUp-------------------------------//
 	public static String blankNameErrorMessage  = "Please Enter Name";
 	public static String blankMobileNoErrorMessage  = "Please Enter Mobile No.";
-	public static String blankServiceCategoriesErrorMessage  = "Please select at least one service category.";
-	public static String blankServicePostcodeErrorMessage  = "Please select at least one service postcode.";
-	public static String blankAdharNoErrorMessage  = "Please Enter Aadhar No.";
-	public static String blankExperienceErrorMessage  = "Please Enter Years of Experience";
+	public static String blankServiceCategoriesErrorMessage = "Please select at least one service category.";
+	public static String blankServicePostcodeErrorMessage = "Please select at least one service postcode.";
+	public static String blankAdharNoErrorMessage = "Please Enter Aadhar No.";
+	public static String blankExperienceErrorMessage = "Please Enter Years of Experience";
 	public static String blankShopNameErrorMessage  = "Please Enter Shop Or Owner Name";
-	public static String blankTypeErrorMessage  = "Please Enter Type";
-	public static String blankLine1ErrorMessage  = "Please Enter Address Line 1";
-	public static String blankLine2ErrorMessage  = "Please Enter Address Line 2";
-	public static String blankLine3ErrorMessage  = "Please Enter Address Line 3";
-	public static String blankCityErrorMessage  = "Please select a city.";
-	public static String blankPostcodeErrorMessage  = "Please select a postcode.";
-	public static String blankConfirmPasswordErrorMessage  = "Please Re-enter Password";
+	public static String blankTypeErrorMessage = "Please Enter Type";
+	public static String blankLine1ErrorMessage = "Please Enter Address Line 1";
+	public static String blankLine2ErrorMessage = "Please Enter Address Line 2";
+	public static String blankLine3ErrorMessage = "Please Enter Address Line 3";
+	public static String blankCityErrorMessage = "Please select a city.";
+	public static String blankPostcodeErrorMessage = "Please select a postcode.";
+	public static String blankConfirmPasswordErrorMessage = "Please Re-enter Password";
 	
 	public static String enterValidNameErrorMessage = "Please enter a valid name with a maximum length of 30 characters, only letters(a-z, A-Z) are allowed.";
 	public static String enterValidEmailAddressErrorMessage = "Please enter a valid email address";

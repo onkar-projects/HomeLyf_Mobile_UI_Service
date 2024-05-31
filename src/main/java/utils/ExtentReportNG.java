@@ -4,23 +4,38 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentReportNG implements ITestListener {
+import io.appium.java_client.android.AndroidDriver;
+import pages.BasePage;
 
+public class ExtentReportNG  implements ITestListener {
+
+	
 	ExtentSparkReporter htmlReporter;//user interface
 	ExtentReports reports;//environmental info
-	ExtentTest  test;//entries for test
+	static ExtentTest  test;//entries for test
+	static AndroidDriver driver; 
+	private static final Logger logger = LogManager.getLogger(BasePage.class);
+	
+	public static void setDriver(AndroidDriver driver) {
+        ExtentReportNG.driver = driver;
+	} 
 	
 	public void configureReport()
 	{
@@ -60,14 +75,13 @@ public class ExtentReportNG implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		System.out.println("Name of test method failed:" +result.getName());
-		test = reports.createTest(result.getName());//create entry in html report
+		System.out.println(Status.FAIL+"Test Case Failed Description: " + result.getThrowable());
+		test = reports.createTest(result.getName());
 		test.log(Status.FAIL, MarkupHelper.createLabel("Name of the failed test case is: "+ result.getName(), ExtentColor.RED));
 		
-		String screenShotPath = System.getProperty("user.dir" + "\\Screenshots\\" + result.getName() + ".png");
-		File screenShotFile = new File(screenShotPath);
-		if(screenShotFile.exists()) {
-			test.fail("Captured Screenshot is below:" +test.addScreenCaptureFromPath(screenShotPath));
-		}
+		String capturescreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
+		 test.addScreenCaptureFromBase64String(capturescreenshot, "Failed Test Screenshot");
+		    test.log(Status.FAIL, MarkupHelper.createLabel("Screenshot of the failure:", ExtentColor.PINK));
 	}
 	
 	//when test case get skipped this method is called
