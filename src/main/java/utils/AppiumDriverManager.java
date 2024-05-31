@@ -1,14 +1,15 @@
 package utils;
 
-import io.appium.java_client.android.AndroidDriver;
+import java.net.MalformedURLException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import config.AppConfig;
 
-import java.net.MalformedURLException;
 import java.net.URL;
+import io.appium.java_client.android.AndroidDriver;
 
 public class AppiumDriverManager {
 

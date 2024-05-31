@@ -8,36 +8,6 @@ public class DataProviderClass {
 	static String path = System.getProperty("user.dir") + "\\src\\main\\resources\\TestData\\testdata.xlsx";
 	static ExcelDataProvider sheet = new ExcelDataProvider(path);
 
-//	@DataProvider(name = "CustomerSignupvaliddata")
-//	public static String[][] getcustomervalidData() throws IOException {
-//		int rownum = sheet.getRowCount("Customer valid Data");
-//		String signupData[][] = new String[rownum][5];
-//
-//		for (int i = 1; i <= rownum; i++) {
-//			for (int j = 0; j < 5; j++) {
-//				signupData[i - 1][j] = sheet.getCellData("Customer valid Data", i, j);
-//
-//				System.out.println("Given data: " + signupData[i - 1][j]);
-//			}
-//		}
-//		return signupData;
-//	}
-
-//	@DataProvider(name = "CustomerSigninvaliddata")
-//	public static String[][] getcustomersignin() throws IOException {
-//		int rownum = sheet.getRowCount("Customer valid Data");
-//		String[][] emailAndPassword = new String[rownum][2];
-//
-//		for (int i = 1; i <= rownum; i++) {
-//			emailAndPassword[i - 1][0] = sheet.getCellData("Customer valid Data", i, 1);
-//			emailAndPassword[i - 1][1] = sheet.getCellData("Customer valid Data", i, 3);
-//
-//			System.out.println(emailAndPassword[i - 1][0]);
-//			System.out.println(emailAndPassword[i - 1][1]);
-//		}
-//		return emailAndPassword;
-//	}
-
 	@DataProvider(name = "emailforforgotpassword")
 	public static String[][] getEmailOTP() throws IOException {
 
@@ -51,38 +21,6 @@ public class DataProviderClass {
 		}
 		return emailid;
 	}
-
-	@DataProvider(name = "CustomerSignupinvaliddata")
-	public static String[][] getcustomerinvalidData() throws IOException {
-
-		int rownum = sheet.getRowCount("Customer invalid Data");
-		String signupData[][] = new String[rownum][18];
-
-		for (int i = 1; i <= rownum; i++) {
-			for (int j = 0; j < 5; j++) {
-				signupData[i - 1][j] = sheet.getCellData("Customer invalid Data", i, j);
-
-				System.out.println("Given data: " + signupData[i - 1][j]);
-			}
-		}
-		return signupData;
-	}
-
-	@DataProvider(name = "CustomerSignininvaliddata")
-	public static Object[][] getcustomersignininvaliddata() throws IOException {
-		int rownum = sheet.getRowCount("Customer invalid Data");
-		Object[][] emailAndPassword = new Object[rownum - 1][2];
-
-		for (int i = 1; i < rownum; i++) {
-			emailAndPassword[i - 1][0] = sheet.getCellData("Customer invalid Data", i, 1);
-			emailAndPassword[i - 1][1] = sheet.getCellData("Customer invalid Data", i, 3);
-
-			System.out.println(emailAndPassword[i - 1][0]);
-			System.out.println(emailAndPassword[i - 1][1]);
-		}
-		return emailAndPassword;
-	}
-
 	@DataProvider(name = "emailforforgotpassword")
 	public static String[][] getEmailOTPinvaliddata() throws IOException {
 
@@ -217,14 +155,18 @@ public class DataProviderClass {
 	}
 	
 	//--------------------------------CustomerTestData----------------------------------//
+	
+	static String cpath = System.getProperty("user.dir") + "\\src\\main\\resources\\TestData\\VendorTestData.xlsx";
+	static ExcelDataProvider csheet = new ExcelDataProvider(cpath);
+
 	@DataProvider(name = "CustomerSignupvaliddata")
 	public static String[][] getcustomervalidData() throws IOException {
-		int rownum = sheet.getRowCount("CustomerTestData");
+		int rownum = csheet.getRowCount("CustomervalidTestData");
 		String signupData[][] = new String[rownum][5];
 
 		for (int i = 1; i <= rownum; i++) {
 			for (int j = 0; j < 5; j++) {
-				signupData[i - 1][j] = sheet.getCellData("CustomerTestData", i, j);
+				signupData[i - 1][j] = csheet.getCellData("CustomervalidTestData", i, j);
 
 				System.out.println("Given data: " + signupData[i - 1][j]);
 			}
@@ -234,12 +176,42 @@ public class DataProviderClass {
 	
 	@DataProvider(name = "CustomerSigninvaliddata")
 	public static String[][] getcustomersignin() throws IOException {
-		int rownum = sheet.getRowCount("CustomerTestData");
+		int rownum = csheet.getRowCount("CustomervalidTestData");
 		String[][] emailAndPassword = new String[rownum][2];
 
 		for (int i = 1; i <= rownum; i++) {
-			emailAndPassword[i - 1][0] = sheet.getCellData("CustomerTestData", i, 1);
-			emailAndPassword[i - 1][1] = sheet.getCellData("CustomerTestData", i, 3);
+			emailAndPassword[i - 1][0] = csheet.getCellData("CustomervalidTestData", i, 1);
+			emailAndPassword[i - 1][1] = csheet.getCellData("CustomervalidTestData", i, 3);
+
+			System.out.println(emailAndPassword[i - 1][0]);
+			System.out.println(emailAndPassword[i - 1][1]);
+		}
+		return emailAndPassword;
+	}
+	@DataProvider(name = "CustomerSignupinvaliddata")
+	public static String[][] getcustomerinvalidData() throws IOException {
+
+		int rownum = csheet.getRowCount("CustomerinvalidTestData");
+		String signupData[][] = new String[rownum][5];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 0; j < 5; j++) {
+				signupData[i - 1][j] = csheet.getCellData("CustomerinvalidTestData", i, j);
+
+				System.out.println("Given data: " + signupData[i - 1][j]);
+			}
+		}
+		return signupData;
+	}
+
+	@DataProvider(name = "CustomerSignininvaliddata")
+	public static String[][] getcustomerinvalidsignin() throws IOException {
+		int rownum = csheet.getRowCount("CustomerinvalidTestData");
+		String[][] emailAndPassword = new String[rownum][2];
+
+		for (int i = 1; i <= rownum; i++) {
+			emailAndPassword[i - 1][0] = csheet.getCellData("CustomerinvalidTestData", i, 1);
+			emailAndPassword[i - 1][1] = csheet.getCellData("CustomerinvalidTestData", i, 3);
 
 			System.out.println(emailAndPassword[i - 1][0]);
 			System.out.println(emailAndPassword[i - 1][1]);
@@ -247,16 +219,4 @@ public class DataProviderClass {
 		return emailAndPassword;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
