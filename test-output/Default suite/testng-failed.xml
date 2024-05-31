@@ -5,9 +5,11 @@
     <classes>
       <class name="tests.Services">
         <methods>
-          <include name="selectLightFitting_CeilingLampsUninstallation"/>
-          <include name="selectLightFitting_ConsultationChargesAndQuotation"/>
+          <include name="TC_140_checkErrorforNotselectingTime"/>
+          <include name="TC_139_checkErrorforMultipleCategeryServices"/>
           <include name="setUP"/>
+          <include name="TC_138_checkErrorforMaxQuantity"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- tests.Services -->
     </classes>

@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.ExtentReportClass"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="tests.Services">
         <methods>
-          <include name="selectLightFitting_CeilingLampsUninstallation"/>
-          <include name="selectLightFitting_ConsultationChargesAndQuotation"/>
+          <include name="TC_116_selectACCleaningwithBlower"/>
+          <include name="TC_136_selectHomeCompleteClean"/>
+          <include name="TC_126_selectFridgeInsufficientCooling"/>
           <include name="setUP"/>
+          <include name="TC_109_selectDrainWastePipeRemoval"/>
+          <include name="TC_118_selectACLeakage"/>
+          <include name="TC_081_selectOfficeConsultation"/>
+          <include name="TC_090_selectTapMixerTapInstall"/>
+          <include name="TC_084_selectFaucetInstallationTapsInstall"/>
+          <include name="TC_088_selectFaucetInstallationTapsRepair"/>
+          <include name="TC_106_selectBasinSinkRepair"/>
+          <include name="TC_135_selectHomeRoomsClean"/>
+          <include name="TC_091_selectTapMixerMixerInstall"/>
+          <include name="tearDown"/>
+          <include name="TC_119_selectACConsulatation"/>
+          <include name="TC_087_selectFaucetInstallationShowerHeadRepair"/>
+          <include name="TC_086_selectFaucetInstallationjetSprayRepair"/>
+          <include name="TC_122_selectTVConsultation"/>
+          <include name="TC_094_selectTapMixerTapsUninstall"/>
+          <include name="TC_115_selectACUninstallation"/>
+          <include name="TC_079_selectCommercialBuildingConsultation"/>
+          <include name="TC_093_selectTapMixerMixerRepair"/>
+          <include name="TC_140_checkErrorforNotselectingTime"/>
+          <include name="TC_137_selectOfficeCommercialConsultation"/>
+          <include name="TC_096_selectTapMixerConsultation"/>
+          <include name="TC_112_selectWaterStorageConsultation"/>
+          <include name="TC_108_selectBasinSinkConsultation"/>
+          <include name="TC_001_Customer_Signin"/>
+          <include name="TC_100_selectToiletIndianToiletsInstall"/>
+          <include name="TC_127_selectWashingMachine"/>
+          <include name="TC_103_selectToiletFlushIssues"/>
+          <include name="TC_105_selectBasinSinkInstall"/>
+          <include name="TC_101_selectToiletIndianToiletsRepair"/>
+          <include name="TC_139_checkErrorforMultipleCategeryServices"/>
+          <include name="TC_104_selectToiletConsultation"/>
+          <include name="TC_132_selectPolishWoodenFurniture"/>
+          <include name="TC_089_selectFaucetInstallationMixerRepair"/>
+          <include name="TC_117_selectACCleaningwithFoam"/>
+          <include name="TC_123_selectFridgeFrosting"/>
+          <include name="TC_077_selectHomeFlatsConsultation"/>
+          <include name="TC_095_selectTapMixerMixerUninstall"/>
+          <include name="TC_083_selectFaucetInstallationShowerHeadInstall"/>
+          <include name="TC_129_selectWashingMachineDrumIssue"/>
+          <include name="TC_076_selectHomeFlats1to4bhk"/>
+          <include name="TC_113_selectACMaintatinance"/>
+          <include name="TC_124_selectFridgeSmellIssue"/>
+          <include name="TC_092_selectTapMixerTapsRepair"/>
+          <include name="TC_099_selectToiletCommodeUninstall"/>
+          <include name="TC_133_selectBathroomCompletewash"/>
+          <include name="TC_128_selectWashingMachineMotorIssue"/>
+          <include name="TC_098_selectToiletCommodeRepair"/>
+          <include name="TC_102_selectToiletIndianToiletsUninstall"/>
+          <include name="TC_125_selectFridgeCompressor"/>
+          <include name="TC_111_selectWaterStorageInstall"/>
+          <include name="TC_080_selectOfficelessthan5k"/>
+          <include name="TC_138_checkErrorforMaxQuantity"/>
+          <include name="TC_134_selectBathroomChemicalwash"/>
+          <include name="TC_114_selectACInstallation"/>
+          <include name="TC_121_selectTVPCBIssue"/>
+          <include name="TC_110_selectDrainWastePipeConsultation"/>
+          <include name="TC_130_selectNewFurnitureEstimate"/>
+          <include name="TC_131_selectOldFurnitureRepair"/>
+          <include name="TC_120_selectTVDisplayIssue"/>
+          <include name="TC_078_selectCommercialBuildingApartment11floor"/>
+          <include name="TC_097_selectToiletCommodeInstall"/>
+          <include name="TC_107_selectBasinSinkUninstall"/>
+          <include name="TC_082_selectFaucetInstallationJetSprayInstall"/>
+          <include name="TC_085_selectFaucetInstallationMixerInstall"/>
         </methods>
       </class> <!-- tests.Services -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

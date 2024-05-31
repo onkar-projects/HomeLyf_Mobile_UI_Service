@@ -376,3 +376,4 @@ public class VendorPage extends BasePage {
 	
 	
 }
+

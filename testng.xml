@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<listeners>
+<listener class-name="utils.ExtentReportClass"/>
+</listeners>
   <test thread-count="5" name="Test">
     <classes>
-	   <class name="tests.VendorTests">
-		  <methods>
-			 <include name="vendor_SignUp_Test"/>
-			  <include name="vendor_SignIn_Test"/>
-			  <include name="vendor_SignUp_Invalid_Test"/>
-			  <include name="vendor_SignIn_Invalid_Test"/>
-			  <include name="vendor_SignIn_Blank_Test"/>
-			  <include name="vendor_SignUp_blank_Test"/>
-			  <include name="vendor_SignUp_InvalidError_Testvendor_SignUp_InvalidError_Test"/>
-		  </methods>
-	  </class>
-	  </classes>
+      <!--class name="tests.CustomerTests"/-->
+      <class name="tests.Services"/>
+      <!--class name="tests.VendorTests"/-->
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
