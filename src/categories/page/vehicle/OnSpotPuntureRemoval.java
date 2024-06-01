@@ -61,7 +61,7 @@ public class OnSpotPuntureRemoval extends BasePage{
 		clickElement(AppiumBy.xpath("//android.widget.Button[@content-desc=\"Continue Booking\"]"));
 	}
 	
-	public String getOrderPlacedSuccessfulMsg() {
+	public String getOrderPlacedSuccessfulMsg() throws InterruptedException {
 		return getTextByAttribute(AppiumBy.xpath("//android.view.View[@content-desc=\"Order placed successfully\"]"));
 	}
 	
@@ -69,7 +69,7 @@ public class OnSpotPuntureRemoval extends BasePage{
 		clickElement(AppiumBy.xpath("(//android.view.View[3]/android.view.View)[1]"));
 	}
 	
-	public String getTextServiceCantAddDiffCategoriesMsg() {
+	public String getTextServiceCantAddDiffCategoriesMsg() throws InterruptedException {
 		return getTextByAttribute(AppiumBy.xpath("//android.view.View[@content-desc=\"We're Sorry you cant add Services from different Category\"]"));
 	}
 	

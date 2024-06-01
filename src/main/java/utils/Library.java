@@ -2,6 +2,7 @@ package utils;
 
 import java.util.ArrayList;
 import org.testng.Assert;
+
 import config.ErrorMessages;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -13,7 +14,6 @@ public class Library  {
 
 	public static VendorPage vendor;
 	public static CustomerPage customer;
-	
 
 	public static VendorPage vendor_SignupDetails(AndroidDriver driver, String name, String email, String mobile,
 			String adhar, String exp, String shopName, String type, String lineone, String lineTwo, String lineThree,
@@ -53,43 +53,46 @@ public class Library  {
 		}
 		return vendor;
 	}
-	
+
 	public static void vendor_SignUp_blank_Details(AndroidDriver driver) {
 		vendor = new VendorPage(driver);
 		vendor.clickOnContinueAsPartner();
 		vendor.clickOnDonotHaveAccountLink();
 		try {
 			vendor.clickVendorSignUpButton();
-		
-		Thread.sleep(2000);
 
-		Assert.assertEquals(vendor.getSignUpNameError(), ErrorMessages.blankNameErrorMessage);
-		Assert.assertEquals(vendor.getSignUpEmailAddressError(), ErrorMessages.enterEmailAddressMessage);
-		Assert.assertEquals(vendor.getSignUpMobileNoError(), ErrorMessages.blankMobileNoErrorMessage);
-		Assert.assertEquals(vendor.getSignUpServiceCategoriesError(), ErrorMessages.blankServiceCategoriesErrorMessage);
-		Assert.assertEquals(vendor.getSignUpServicePostcodesError(), ErrorMessages.blankServicePostcodeErrorMessage);
-		Assert.assertEquals(vendor.getSignUpAadharNoError(), ErrorMessages.blankAdharNoErrorMessage);
-		Assert.assertEquals(vendor.getSignUpExpError(), ErrorMessages.blankExperienceErrorMessage);
-		Assert.assertEquals(vendor.getSignUpShopNameError(), ErrorMessages.blankShopNameErrorMessage);
-		Assert.assertEquals(vendor.getSignUpTypeError(), ErrorMessages.blankTypeErrorMessage);
-		Assert.assertEquals(vendor.getSignUpLine1Error(), ErrorMessages.blankLine1ErrorMessage);
-		Assert.assertEquals(vendor.getSignUpLine2Error(), ErrorMessages.blankLine2ErrorMessage);
-		Assert.assertEquals( vendor.getSignUpLine3Error(), ErrorMessages.blankLine3ErrorMessage);
-		Assert.assertEquals(vendor.getVendorSignInPasswordErrorMessage(), ErrorMessages.blankPasswordErrorMessage);
-		Assert.assertEquals(vendor.getSignUpConfirmPasswordError(), ErrorMessages.blankConfirmPasswordErrorMessage);
+			Thread.sleep(2000);
+
+			Assert.assertEquals(vendor.getSignUpNameError(), ErrorMessages.blankNameErrorMessage);
+			Assert.assertEquals(vendor.getSignUpEmailAddressError(), ErrorMessages.enterEmailAddressMessage);
+			Assert.assertEquals(vendor.getSignUpMobileNoError(), ErrorMessages.blankMobileNoErrorMessage);
+			Assert.assertEquals(vendor.getSignUpServiceCategoriesError(),
+					ErrorMessages.blankServiceCategoriesErrorMessage);
+			Assert.assertEquals(vendor.getSignUpServicePostcodesError(),
+					ErrorMessages.blankServicePostcodeErrorMessage);
+			Assert.assertEquals(vendor.getSignUpAadharNoError(), ErrorMessages.blankAdharNoErrorMessage);
+			Assert.assertEquals(vendor.getSignUpExpError(), ErrorMessages.blankExperienceErrorMessage);
+			Assert.assertEquals(vendor.getSignUpShopNameError(), ErrorMessages.blankShopNameErrorMessage);
+			Assert.assertEquals(vendor.getSignUpTypeError(), ErrorMessages.blankTypeErrorMessage);
+			Assert.assertEquals(vendor.getSignUpLine1Error(), ErrorMessages.blankLine1ErrorMessage);
+			Assert.assertEquals(vendor.getSignUpLine2Error(), ErrorMessages.blankLine2ErrorMessage);
+			Assert.assertEquals(vendor.getSignUpLine3Error(), ErrorMessages.blankLine3ErrorMessage);
+			Assert.assertEquals(vendor.getVendorSignInPasswordErrorMessage(), ErrorMessages.blankPasswordErrorMessage);
+			Assert.assertEquals(vendor.getSignUpConfirmPasswordError(), ErrorMessages.blankConfirmPasswordErrorMessage);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 
 	}
-	public static void vendor_SignUp_InvalidError_Details(AndroidDriver driver, String name, String email, String mobile, String adhar, String exp,
-			String shopName, String type, String lineOne, String lineTwo, String lineThree, String password,
-			String confirmPassword) throws InterruptedException {
-		
+
+	public static void vendor_SignUp_InvalidError_Details(AndroidDriver driver, String name, String email,
+			String mobile, String adhar, String exp, String shopName, String type, String lineOne, String lineTwo,
+			String lineThree, String password, String confirmPassword) throws InterruptedException {
+
 		vendor = new VendorPage(driver);
 		vendor.clickOnContinueAsPartner();
 		vendor.clickOnDonotHaveAccountLink();
-		
+
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Thread.sleep(2000);
 		Assert.assertEquals(vendor.getSignUpInvalidNameError(name), ErrorMessages.invalidNameErrorMessage);
@@ -102,10 +105,12 @@ public class Library  {
 		Assert.assertEquals(vendor.getSignUpInvalidTypeError(type), ErrorMessages.invalidTypeErrorMessage);
 		Assert.assertEquals(vendor.getSignUpInvalidLine1Error(lineOne), ErrorMessages.invalidAddressLine1ErrorMessage);
 		Assert.assertEquals(vendor.getSignUpInvalidLine2Error(lineTwo), ErrorMessages.invalidAddressLine2ErrorMessage);
-		Assert.assertEquals(vendor.getSignUpInvalidLine3Error(lineThree), ErrorMessages.invalidAddressLine3ErrorMessage);
+		Assert.assertEquals(vendor.getSignUpInvalidLine3Error(lineThree),
+				ErrorMessages.invalidAddressLine3ErrorMessage);
 		Assert.assertEquals(vendor.getSignUpInvalidPasswordError(password), ErrorMessages.invalidPasswordErrorMessage);
-		Assert.assertEquals(vendor.getSignUpInvalidConfirmPasswordError(confirmPassword), ErrorMessages.invalidPasswordErrorMessage);
-		
+		Assert.assertEquals(vendor.getSignUpInvalidConfirmPasswordError(confirmPassword),
+				ErrorMessages.invalidPasswordErrorMessage);
+
 	}
 
 	public static VendorPage vendor_SignInDetails(AndroidDriver driver, String username, String password) {
@@ -230,6 +235,125 @@ public class Library  {
 		}
 		return customer;
 	}
+	
+	public static String customer_SignUp_Details(AndroidDriver driver) {
+		String actual = "";
+		try {
+			customer = new CustomerPage(driver);
+			customer.clickContiueAsCustomerButton();
+			customer.clickCustomerSignUp();
+			customer.clickCustomerSignupButton();
+			actual = customer.getCustomerSignUpNamenullErrorMessage();
+			customer.getCustomerSignUpEmailnullErrorMessage();
+			customer.getCustomerSignUpMobileNumbernullErrorMessage();
+			customer.getCustomerSignUpPasswordnullErrorMessage();
+			customer.getCustomerSignUpConfirmPasswordnullErrorMessage();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return actual;
+	}
+
+	public static String customer_SignUp_invalidDetails(AndroidDriver driver, String name, String emailid,
+			String number, String password, String confirmpassword) {
+		String actual = null;
+		try {
+			customer = new CustomerPage(driver);
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId("5t7my@fthcapital.com");
+			customer.enterCustomer_Password("Pass@123");
+			customer.clickCustomer_Sign_In_button();
+			customer.clickOnProcedButton();
+			
+			System.out.println("----------"+customer.getAddressErrorMsg()+"----------------------");
+			Assert.assertEquals(customer.getAddressErrorMsg(), "Please select an address");
+						customer.clickContiueAsCustomerButton();
+			customer.clickCustomerSignUp();
+			customer.enterCustomerName(name);
+			// customer.getCustomerSignUpNameinvalidErrorMessage();
+			actual = customer.getCustomerSignUpNameinvalidErrorMessage();
+			customer.enterCustomerEmail(emailid);
+			// customer.getCustomerSignUpEmailinvalidErrorMessage();
+			customer.enterCustomerMobileNumber(number);
+			// customer.getCustomerSignUpMobileNumberinvalidErrorMessage();
+			customer.enterCustomerPassword(password);
+			// customer.getCustomerSignUpPasswordinvalidErrorMessage();
+			customer.enterCustomerConfirmPassword(confirmpassword);
+			// customer.getCustomerSignUpConfirmPasswordinvalidErrorMessage();
+			customer.clickCustomerSignupButton();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return actual;
+	}
+
+	public static CustomerPage customer_SignIn_Detail(AndroidDriver driver) {
+
+		try {
+			customer = new CustomerPage(driver);
+			customer.isAlertPresent();
+			customer.dismissAlert();
+			customer.enterCustomer_EmailId("fiweg27944@mfyax.com");
+			customer.enterCustomer_Password("String@123");
+			customer.clickCustomer_Sign_In_button();
+			customer.selectAddress();
+			customer.clickProceedtab();
+			Thread.sleep(5000);
+
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return customer;
+	}
+	public static CustomerPage customer_SignIn_Details(AndroidDriver driver, String email, String pass) {
+
+		try {
+			customer = new CustomerPage(driver);
+			customer.isAlertPresent();
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId(email);
+			customer.enterCustomer_Password(pass);
+			customer.clickCustomer_Sign_In_button();
+			customer.selectAddress();
+			customer.clickProceedtab();
+			Thread.sleep(5000);
+
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return customer;
+	}
+	public static String customer_SignIn_Details_nulldata(AndroidDriver driver) {
+		String actual = "";
+		try {
+			customer = new CustomerPage(driver);
+			customer.clickContiueAsCustomerButton();
+			customer.clickCustomer_Sign_In_button();
+			actual = customer.getCustomerSignInEmailnullErrorMessage();
+			customer.getCustomerSignInPasswordnullErrorMessage();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return actual;
+	}
+
+	public static String customer_SignIn_invalidDetails(AndroidDriver driver, String email, String password) {
+		String actual = null;
+		try {
+			customer = new CustomerPage(driver);
+			customer.clickContiueAsCustomerButton();
+			customer.enterCustomer_EmailId(email);
+			// customer.getCustomerSignIninvalidErrorMessage();
+			actual = customer.getCustomerSignIninvalidErrorMessage();
+			customer.enterCustomer_Password(password);
+			// customer.getCustomerSignInPasswordinvalidErrorMessage();
+			customer.clickCustomer_Sign_In_button();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return actual;
+	}
 
 	public static String vendor_BlankEmailPassword(AndroidDriver driver) {
 		String actual = "";
@@ -244,4 +368,8 @@ public class Library  {
 		}
 		return actual;
 	}
+
+	
+
 }
+

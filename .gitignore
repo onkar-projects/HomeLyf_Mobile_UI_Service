@@ -1,9 +1,9 @@
-target/
+/target/
 
 #Eclipse Dot files
 .classpath
 .project
 .settings/
 test-output/
-Reports/
+/Reports/
 logs/

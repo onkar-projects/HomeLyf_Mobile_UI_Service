@@ -41,7 +41,7 @@ public class SpecializedRodent extends BasePage {
 		clickElement(AppiumBy.xpath("//android.widget.Button[@content-desc=\"Proceed\"]"));
 	}
 	
-	public String getOrderPlacedSuccessfulMsg() {
+	public String getOrderPlacedSuccessfulMsg() throws InterruptedException {
 		return getTextByAttribute(AppiumBy.xpath("//android.view.View[@content-desc=\"Order placed successfully\"]"));
 	}
 	
