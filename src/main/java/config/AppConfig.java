@@ -1,10 +1,9 @@
 package config;
 
 public class AppConfig {
-
-	public static final String APP_PATH = "C:\\Users\\monik\\eclipse-workspace\\appium\\HomeLyf_Mobile_Automation\\src\\main\\resources\\Homelyfservices.apk";
+	public static final String APP_PATH = "C:\\Users\\DELL-PC\\Documents\\Udemy java class\\mobileDemoProject\\src\\main\\resources\\app\\HomeLyf.apk";
 	public static final String PLATFORM_NAME = "Android";
-	public static final String DEVICE_NAME = "Androidemulator";
+	public static final String DEVICE_NAME = "pixel6";
 	public static final String AUTO_NAME = "uiautomator2";
 
 	// ------------------------------------------RealDevice------------------------------------//
@@ -15,4 +14,6 @@ public class AppConfig {
 	public static final String Real_APP_ACTIVITY = "com.qdtas.homelyf_services.MainActivity";
 	public static final String Real_AUTO_NAME = "uiautomator2";
 	
+	
 }
+

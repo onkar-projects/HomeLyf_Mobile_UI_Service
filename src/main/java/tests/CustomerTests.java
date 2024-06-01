@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import config.ErrorMessages;
 import io.appium.java_client.android.AndroidDriver;
+import pages.CustomerPage;
 import utils.AppiumDriverManager;
 import utils.AppiumServerManager;
 import utils.Library;

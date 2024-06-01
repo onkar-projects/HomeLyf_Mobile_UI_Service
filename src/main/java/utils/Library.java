@@ -10,7 +10,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import pages.CustomerPage;
 import pages.VendorPage;
 
-public class Library {
+public class Library  {
 
 	public static VendorPage vendor;
 	public static CustomerPage customer;
@@ -158,7 +158,7 @@ public class Library {
 
 		try {
 			customer = new CustomerPage(driver);
-			customer.clickContiueAsCustomerButton();
+//			customer.clickContiueAsCustomerButton();
 			customer.clickCustomerSignUp();
 			customer.enterCustomerName(name);
 			customer.enterCustomerEmail(emailid);
@@ -171,7 +171,71 @@ public class Library {
 		}
 		return customer;
 	}
+	//Data Driven
+	public static CustomerPage customer_SignInDD_Details(AndroidDriver driver,String email,String password) {
 
+		try {
+			customer = new CustomerPage(driver);
+//			customer.clickContiueAsCustomerButton();
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId("5t7my@fthcapital.com");
+			customer.enterCustomer_Password("Pass@123");
+			customer.clickCustomer_Sign_In_button();
+			customer.getWelcomeCustomerMsg();
+			customer.clickOnSelectAddressRadioBtn();
+			customer.clickOnProcedButton();			
+			Thread.sleep(5000);
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return customer;
+	}
+
+	public static CustomerPage customer_SignIn_Details(AndroidDriver driver) {
+
+		try {
+			customer = new CustomerPage(driver);
+//			customer.clickContiueAsCustomerButton();
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId("5t7my@fthcapital.com");
+			customer.enterCustomer_Password("Pass@123");
+			customer.clickCustomer_Sign_In_button();
+			String welcomemsg = customer.getWelcomeCustomerMsg();
+			System.out.println("------------"+welcomemsg+"-------------");
+			customer.clickOnSelectAddressRadioBtn();
+			customer.clickOnProcedButton();			
+			Thread.sleep(5000);
+			Assert.assertEquals(welcomemsg, "Welcome! Satya Your home, our priority. Let's get things done!");
+			
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return customer;
+	}
+	
+	public static CustomerPage AddressErrorMsg(AndroidDriver driver) {
+
+		try {
+			customer = new CustomerPage(driver);
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId("5t7my@fthcapital.com");
+			customer.enterCustomer_Password("Pass@123");
+			customer.clickCustomer_Sign_In_button();
+			customer.clickOnProcedButton();
+			
+			System.out.println("----------"+customer.getAddressErrorMsg()+"----------------------");
+			Assert.assertEquals(customer.getAddressErrorMsg(), "Please select an address");
+			
+			Thread.sleep(5000);
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return customer;
+	}
+	
 	public static String customer_SignUp_Details(AndroidDriver driver) {
 		String actual = "";
 		try {
@@ -196,7 +260,15 @@ public class Library {
 		String actual = null;
 		try {
 			customer = new CustomerPage(driver);
-			customer.clickContiueAsCustomerButton();
+			customer.acceptAlert();
+			customer.enterCustomer_EmailId("5t7my@fthcapital.com");
+			customer.enterCustomer_Password("Pass@123");
+			customer.clickCustomer_Sign_In_button();
+			customer.clickOnProcedButton();
+			
+			System.out.println("----------"+customer.getAddressErrorMsg()+"----------------------");
+			Assert.assertEquals(customer.getAddressErrorMsg(), "Please select an address");
+						customer.clickContiueAsCustomerButton();
 			customer.clickCustomerSignUp();
 			customer.enterCustomerName(name);
 			// customer.getCustomerSignUpNameinvalidErrorMessage();

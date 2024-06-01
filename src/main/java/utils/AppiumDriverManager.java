@@ -1,15 +1,14 @@
 package utils;
 
-import java.net.MalformedURLException;
-
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import config.AppConfig;
 
+import java.net.MalformedURLException;
 import java.net.URL;
-import io.appium.java_client.android.AndroidDriver;
 
 public class AppiumDriverManager {
 
@@ -28,6 +27,7 @@ public class AppiumDriverManager {
             // Initialize Appium driver
             AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
             logger.info("Appium driver initialized successfully.");
+            ExtentReportNG.setDriver(driver);
             return driver;
         } catch (MalformedURLException e) {
             logger.error("Failed to initialize Appium driver: " + e.getMessage());
